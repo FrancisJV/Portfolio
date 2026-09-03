@@ -29,8 +29,8 @@ All editable content is intentionally separated from React component logic into 
 │   └── workflows/
 │       └── deploy.yml            # Automated GitHub Pages deployment
 ├── public/
-│   ├── Vidhushika-Francis-CV.pdf # Your downloadable CV document
 │   ├── favicon.svg               # Monogram favicon
+│   ├── profile.jpeg              # Professional portrait photograph
 │   ├── robots.txt                # Search engine crawler instructions
 │   └── sitemap.xml               # Search engine sitemap
 ├── src/
@@ -140,15 +140,7 @@ export const socialLinks = {
 ```
 *Note: If the `url` string is left empty `""`, the respective button is safely hidden.*
 
-### 3. How to Replace Your CV PDF
-1. Save your latest CV as a PDF file named **`Vidhushika-Francis-CV.pdf`**.
-2. Copy and paste it directly into the `public/` folder, replacing the existing placeholder:
-   ```text
-   public/Vidhushika-Francis-CV.pdf
-   ```
-3. The "Download CV" buttons in the navigation bar, Hero, and About sections will immediately download/open your new CV.
-
-### 4. How to Add or Update a Project
+### 3. How to Add or Update a Project
 Open `src/data/projects.js` and add a new object to the `projectsData` array:
 ```javascript
 {

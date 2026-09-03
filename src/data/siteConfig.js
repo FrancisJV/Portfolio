@@ -9,7 +9,7 @@ export const siteConfig = {
   role: "Data, Technology & Digital Solutions",
   degree: "BSc (Hons) in Information Technology – Specializing in Data Science",
   location: "Sri Lanka",
-  email: "vidhushika.francis@gmail.com",
+  email: "vidhushika.remote@gmail.com",
 
   // Profile Picture (Saved in public/profile.jpeg)
   profileImage: "/profile.jpeg",
@@ -29,12 +29,6 @@ export const siteConfig = {
 
   // Brand Message
   brandMessage: "I combine analytical thinking, technology, data and business understanding to help transform ideas and information into useful digital solutions.",
-
-  // CV File (placed in public/ directory)
-  cv: {
-    fileName: "Vidhushika-Francis-CV.pdf",
-    label: "Download CV",
-  },
 
   // Capability Strip items (displayed below Hero)
   capabilityStrip: [

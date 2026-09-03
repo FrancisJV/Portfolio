@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, ArrowUpRight, Download, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Sparkles } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { Container } from './Container';
 import { Button } from './Button';
@@ -20,7 +20,7 @@ export function Hero() {
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
 
-          {/* Left Column: Headline, Positioning, Bio, CTAs (Hierarchy #1, #2, #3) */}
+          {/* Left Column: Headline, Positioning, Bio, CTAs (Hierarchy #1, #2) */}
           <div className="lg:col-span-7 flex flex-col items-start text-left order-2 lg:order-1">
 
             {/* Availability Badge (Increased typography to 14px and refined padding) */}
@@ -52,7 +52,7 @@ export function Hero() {
               {siteConfig.hero.bio}
             </p>
 
-            {/* CTA Hierarchy: Primary (Glow), Secondary (Outlined Dark), Tertiary (Quiet Ghost) */}
+            {/* CTA Hierarchy: Primary (Glow), Secondary (Outlined Dark) */}
             <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
               <Button
                 onClick={() => scrollTo('projects')}
@@ -72,18 +72,6 @@ export function Hero() {
                 className="w-full sm:w-auto whitespace-nowrap"
               >
                 Work With Me
-              </Button>
-
-              <Button
-                href={`/${siteConfig.cv.fileName}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="ghost"
-                size="lg"
-                icon={Download}
-                className="w-full sm:w-auto text-slate-400 hover:text-white hover:bg-dark-800/80 border border-transparent hover:border-dark-700/60 whitespace-nowrap"
-              >
-                {siteConfig.cv.label}
               </Button>
             </div>
           </div>

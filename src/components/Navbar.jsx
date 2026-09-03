@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, Sparkles, Download } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Sparkles } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { Button } from './Button';
 import { useScrollSpy } from '../hooks/useScrollSpy';
@@ -103,17 +103,6 @@ export function Navbar({ onOpenContact }) {
           {/* Action CTAs */}
           <div className="hidden sm:flex items-center gap-2.5 flex-shrink-0">
             <Button
-              href={`/${siteConfig.cv.fileName}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="secondary"
-              size="sm"
-              icon={Download}
-              className="text-xs whitespace-nowrap"
-            >
-              CV
-            </Button>
-            <Button
               href="#freelance"
               onClick={(e) => handleNavClick(e, 'freelance')}
               variant="glow"
@@ -164,17 +153,6 @@ export function Navbar({ onOpenContact }) {
           </nav>
 
           <div className="pt-6 border-t border-dark-800 space-y-3">
-            <Button
-              href={`/${siteConfig.cv.fileName}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="secondary"
-              size="md"
-              icon={Download}
-              className="w-full justify-center"
-            >
-              Download CV
-            </Button>
             <Button
               href="#freelance"
               onClick={(e) => handleNavClick(e, 'freelance')}

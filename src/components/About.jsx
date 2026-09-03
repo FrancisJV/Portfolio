@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Brain, MessageSquareCode, Target, Rocket, GraduationCap, MapPin, Sparkles, Briefcase } from 'lucide-react';
+import { Brain, MessageSquareCode, Target, Rocket, GraduationCap, MapPin, Sparkles, Briefcase } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { Container } from './Container';
 import { SectionHeading } from './SectionHeading';
@@ -56,18 +56,8 @@ export function About() {
 
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <Button
-                href={`/${siteConfig.cv.fileName}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="glow"
-                size="md"
-                icon={Download}
-              >
-                {siteConfig.cv.label}
-              </Button>
-              <Button
                 href="#experience"
-                variant="secondary"
+                variant="glow"
                 size="md"
                 icon={Briefcase}
               >

@@ -8,8 +8,8 @@
 export const socialLinks = {
   email: {
     label: "Email",
-    value: "vidhushika.francis@gmail.com",
-    href: "mailto:vidhushika.francis@gmail.com",
+    value: "vidhushika.remote@gmail.com",
+    href: "mailto:vidhushika.remote@gmail.com",
   },
   linkedin: {
     label: "LinkedIn",

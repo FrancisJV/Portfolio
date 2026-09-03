@@ -9,8 +9,7 @@ let hasErrors = false;
 const publicFiles = [
   'public/favicon.svg',
   'public/robots.txt',
-  'public/sitemap.xml',
-  'public/Vidhushika-Francis-CV.pdf'
+  'public/sitemap.xml'
 ];
 
 publicFiles.forEach(file => {
