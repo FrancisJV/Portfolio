@@ -10,10 +10,10 @@ export const siteConfig = {
   degree: "BSc (Hons) in Information Technology – Specializing in Data Science",
   location: "Sri Lanka",
   email: "vidhushika.francis@gmail.com",
-  
-  // Profile Picture (Save your photo in public/profile.jpg or public/profile.png)
-  profileImage: "/profile.png",
-  
+
+  // Profile Picture (Saved in public/profile.jpeg)
+  profileImage: "/profile.jpeg",
+
   // Availability status badge
   availability: {
     status: "Available for opportunities & selected freelance projects",
@@ -24,7 +24,7 @@ export const siteConfig = {
   hero: {
     eyebrow: "DATA • TECHNOLOGY • DIGITAL SOLUTIONS",
     headline: "Turning ideas, data and technology into practical digital solutions.",
-    bio: "Information Technology graduate specializing in Data Science with professional experience spanning data analytics, AI automation, business analysis, process improvement, and technology projects. Also available for selected freelance work involving websites, data dashboards, QA/testing, and project guidance.",
+    bio: "Information Technology graduate specializing in Data Science, with experience across data analytics, AI automation and business analysis. I build practical, data-driven digital solutions while continuously expanding my technical expertise.",
   },
 
   // Brand Message

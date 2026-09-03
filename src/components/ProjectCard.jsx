@@ -48,11 +48,11 @@ export function ProjectCard({ project, onOpenModal }) {
         {/* Problem & Solution Quick Highlights */}
         <div className="space-y-2 mb-5 p-3.5 rounded-xl bg-dark-950/60 border border-dark-800/80 text-xs">
           <div>
-            <span className="font-bold text-slate-300 uppercase tracking-wide text-[10px]">Problem:</span>{' '}
+            <span className="font-bold text-slate-300 uppercase tracking-wide text-[12px]">Problem:</span>{' '}
             <span className="text-slate-400 line-clamp-2">{project.problem}</span>
           </div>
           <div>
-            <span className="font-bold text-brand-300 uppercase tracking-wide text-[10px]">Solution:</span>{' '}
+            <span className="font-bold text-brand-300 uppercase tracking-wide text-[12px]">Solution:</span>{' '}
             <span className="text-slate-400 line-clamp-2">{project.solution}</span>
           </div>
         </div>
@@ -62,7 +62,7 @@ export function ProjectCard({ project, onOpenModal }) {
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="px-2 py-0.5 rounded-md bg-dark-950 border border-dark-750 text-[11px] font-medium text-slate-400 group-hover:text-slate-300 transition-colors"
+              className="px-2 py-0.5 rounded-md bg-dark-950 border border-dark-750 text-[12px] font-medium text-slate-400 group-hover:text-slate-300 transition-colors"
             >
               {tech}
             </span>

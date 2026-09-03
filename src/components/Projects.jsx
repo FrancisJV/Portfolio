@@ -20,7 +20,7 @@ export function Projects() {
   const sinhaLearnProject = projectsData.find(p => p.id === 'sinhalearn');
 
   return (
-    <section id="projects" className="py-20 md:py-28 bg-dark-950 relative">
+    <section id="projects" className="pt-8 pb-20 md:pt-10 md:pb-28 bg-dark-950 relative">
       <Container>
         <SectionHeading
           eyebrow="Portfolio Projects"
@@ -32,7 +32,7 @@ export function Projects() {
         {sinhaLearnProject && (
           <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-dark-900 via-dark-850 to-dark-900 border border-brand-500/30 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
-            
+
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-8">
                 <div className="flex flex-wrap items-center gap-2.5 mb-3">
@@ -48,7 +48,7 @@ export function Projects() {
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-2">
                   {sinhaLearnProject.title}
                 </h3>
-                
+
                 <p className="text-xs sm:text-sm text-brand-300 font-medium mb-3">
                   {sinhaLearnProject.fullTitle}
                 </p>
@@ -74,7 +74,7 @@ export function Projects() {
                   >
                     View Research Case Study
                   </Button>
-                  
+
                   {sinhaLearnProject.publication && sinhaLearnProject.publication.url && (
                     <Button
                       href={sinhaLearnProject.publication.url}

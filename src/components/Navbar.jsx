@@ -43,8 +43,7 @@ export function Navbar({ onOpenContact }) {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      const top = element.getBoundingClientRect().top + window.pageYOffset - 80;
-      window.scrollTo({ top, behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -57,30 +56,30 @@ export function Navbar({ onOpenContact }) {
           : 'bg-transparent py-5'
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="flex items-center justify-between gap-4">
           {/* Monogram / Brand Wordmark */}
           <a
             href="#hero"
             onClick={(e) => handleNavClick(e, 'hero')}
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-500/50 rounded-lg p-1"
+            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-500/50 rounded-lg p-1 flex-shrink-0"
             aria-label="Vidhushika Francis - Home"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center font-extrabold text-white text-sm shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform duration-200">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center font-extrabold text-white text-sm sm:text-base shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform duration-200">
               VF
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-slate-100 text-sm tracking-tight group-hover:text-brand-300 transition-colors">
+              <span className="font-bold text-slate-100 text-sm sm:text-[15px] tracking-tight group-hover:text-brand-300 transition-colors">
                 {siteConfig.name}
               </span>
-              <span className="text-[11px] text-slate-400 font-medium tracking-wide">
-                Data & Tech Solutions
+              <span className="text-[10px] sm:text-[11px] text-slate-400 font-medium tracking-tight whitespace-nowrap">
+                Data • Technology • Digital Solutions
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 bg-dark-900/60 border border-dark-800/80 px-3 py-1.5 rounded-full backdrop-blur-md" aria-label="Main Navigation">
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-dark-900/70 border border-dark-800/80 px-2.5 xl:px-3 py-1.5 rounded-full backdrop-blur-md flex-shrink-0" aria-label="Main Navigation">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
@@ -89,7 +88,7 @@ export function Navbar({ onOpenContact }) {
                   href={`#${item.id}`}
                   onClick={(e) => handleNavClick(e, item.id)}
                   className={cn(
-                    'px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200',
+                    'px-3 xl:px-3.5 py-1.5 text-[13.5px] xl:text-[14.5px] font-medium tracking-tight whitespace-nowrap rounded-full transition-all duration-200',
                     isActive
                       ? 'bg-brand-500/15 text-brand-300 font-semibold shadow-inner'
                       : 'text-slate-300 hover:text-white hover:bg-dark-800/60'
@@ -102,7 +101,7 @@ export function Navbar({ onOpenContact }) {
           </nav>
 
           {/* Action CTAs */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-2.5 flex-shrink-0">
             <Button
               href={`/${siteConfig.cv.fileName}`}
               target="_blank"
@@ -110,17 +109,17 @@ export function Navbar({ onOpenContact }) {
               variant="secondary"
               size="sm"
               icon={Download}
-              className="text-xs"
+              className="text-xs whitespace-nowrap"
             >
               CV
             </Button>
             <Button
-              href="#contact"
-              onClick={(e) => handleNavClick(e, 'contact')}
+              href="#freelance"
+              onClick={(e) => handleNavClick(e, 'freelance')}
               variant="glow"
               size="sm"
               icon={ArrowUpRight}
-              className="text-xs"
+              className="text-xs whitespace-nowrap"
             >
               Work With Me
             </Button>
@@ -177,8 +176,8 @@ export function Navbar({ onOpenContact }) {
               Download CV
             </Button>
             <Button
-              href="#contact"
-              onClick={(e) => handleNavClick(e, 'contact')}
+              href="#freelance"
+              onClick={(e) => handleNavClick(e, 'freelance')}
               variant="glow"
               size="md"
               icon={ArrowUpRight}

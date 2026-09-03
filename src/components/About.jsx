@@ -30,7 +30,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-dark-950 relative">
+    <section id="about" className="pt-8 pb-12 md:pt-10 md:pb-16 bg-dark-950 relative scroll-mt-16 md:scroll-mt-16">
       <Container>
         <SectionHeading
           eyebrow="About Me"
@@ -39,7 +39,7 @@ export function About() {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-          
+
           {/* Left Column: Narrative Bio */}
           <div className="lg:col-span-7 space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed font-normal">
             <p>

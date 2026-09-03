@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  GraduationCap, 
-  Compass, 
-  Lightbulb, 
-  ShieldAlert, 
-  ArrowRight, 
-  BookOpen, 
+import {
+  GraduationCap,
+  Compass,
+  Lightbulb,
+  ShieldAlert,
+  ArrowRight,
+  BookOpen,
   CheckCircle2,
   Users
 } from 'lucide-react';
@@ -21,13 +21,12 @@ export function ProjectGuidance({ onSelectService }) {
     }
     const contactSection = document.getElementById('contact');
     if (contactSection) {
-      const top = contactSection.getBoundingClientRect().top + window.pageYOffset - 80;
-      window.scrollTo({ top, behavior: 'smooth' });
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <section id="guidance" className="py-20 md:py-28 bg-dark-950 relative border-t border-dark-800/80">
+    <section id="guidance" className="pt-8 pb-20 md:pt-10 md:pb-28 bg-dark-950 relative border-t border-dark-800/80">
       <Container>
         <SectionHeading
           eyebrow="Educational Mentoring"
@@ -43,7 +42,7 @@ export function ProjectGuidance({ onSelectService }) {
           <blockquote className="text-base sm:text-lg font-semibold text-white italic">
             "{guidanceData.corePhilosophy}"
           </blockquote>
-          <p className="text-xs text-slate-400 mt-2">
+          <p className="text-sm text-slate-400 mt-2">
             Tailored mentoring for university students, self-taught developers, and project builders.
           </p>
         </div>
@@ -59,10 +58,10 @@ export function ProjectGuidance({ onSelectService }) {
                 <div className="text-[10px] font-mono text-brand-300 mb-2 font-bold">
                   0{idx + 1}
                 </div>
-                <h4 className="text-sm font-bold text-slate-100 mb-2">
+                <h4 className="text-[14px] font-bold text-slate-100 mb-2">
                   {item.title}
                 </h4>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <p className="text-sm text-slate-400 leading-relaxed">
                   {item.description}
                 </p>
               </div>

@@ -7,16 +7,15 @@ export function FreelanceCTA() {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
-      const top = contactSection.getBoundingClientRect().top + window.pageYOffset - 80;
-      window.scrollTo({ top, behavior: 'smooth' });
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <section className="py-16 md:py-20 bg-dark-950 relative overflow-hidden">
+    <section id="freelance" className="pt-16 pb-16 md:pt-20 md:pb-16 bg-dark-950 relative overflow-hidden">
       <Container>
         <div className="relative rounded-3xl p-8 sm:p-12 md:p-16 bg-gradient-to-br from-brand-950/60 via-dark-900 to-indigo-950/60 border border-brand-500/30 text-center shadow-2xl overflow-hidden">
-          
+
           {/* Subtle ambient blur bubbles */}
           <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-64 h-64 bg-brand-500/15 rounded-full blur-3xl pointer-events-none"></div>
           <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-64 h-64 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none"></div>

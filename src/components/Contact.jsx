@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Mail, 
-  Send, 
-  Linkedin, 
-  Github, 
-  CheckCircle2, 
-  AlertCircle, 
-  Sparkles, 
-  Clock, 
+import {
+  Mail,
+  Send,
+  Linkedin,
+  Github,
+  CheckCircle2,
+  AlertCircle,
+  Sparkles,
+  Clock,
   ShieldCheck,
   PhoneCall
 } from 'lucide-react';
@@ -160,7 +160,7 @@ export function Contact({ preselectedService }) {
   const hasGithub = Boolean(socialLinks.github && socialLinks.github.url && socialLinks.github.url.trim() !== '');
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-dark-900/60 relative border-t border-dark-800/80">
+    <section id="contact" className="pt-8 pb-10 md:pt-0 md:pb-0 bg-dark-900/60 relative border-t border-dark-800/80">
       <Container>
         <SectionHeading
           eyebrow="Get in Touch"
@@ -169,7 +169,7 @@ export function Contact({ preselectedService }) {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start max-w-6xl mx-auto">
-          
+
           {/* Left Column: Direct Inquiries & Contact Channels */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-dark-900 border border-dark-800 rounded-2xl p-6 sm:p-7 shadow-xl">
@@ -256,7 +256,7 @@ export function Contact({ preselectedService }) {
           {/* Right Column: Inquiry Form */}
           <div className="lg:col-span-7">
             <div className="bg-dark-900 border border-dark-800 rounded-2xl p-6 sm:p-8 shadow-xl relative">
-              
+
               {/* Form Success Banner */}
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm flex items-start gap-3 animate-fade-in" role="alert">
@@ -280,7 +280,7 @@ export function Contact({ preselectedService }) {
               )}
 
               <form onSubmit={handleSubmit} noValidate className="space-y-4 sm:space-y-5">
-                
+
                 {/* Name and Email Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name */}
@@ -296,9 +296,8 @@ export function Contact({ preselectedService }) {
                       onChange={handleChange}
                       placeholder="e.g. Sarah Perera"
                       required
-                      className={`w-full px-3.5 py-2.5 rounded-xl bg-dark-950 border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors ${
-                        errors.name ? 'border-rose-500/80 bg-rose-950/20' : 'border-dark-750 focus:border-brand-500'
-                      }`}
+                      className={`w-full px-3.5 py-2.5 rounded-xl bg-dark-950 border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors ${errors.name ? 'border-rose-500/80 bg-rose-950/20' : 'border-dark-750 focus:border-brand-500'
+                        }`}
                     />
                     {errors.name && (
                       <p className="mt-1 text-[11px] text-rose-400">{errors.name}</p>
@@ -318,9 +317,8 @@ export function Contact({ preselectedService }) {
                       onChange={handleChange}
                       placeholder="you@example.com"
                       required
-                      className={`w-full px-3.5 py-2.5 rounded-xl bg-dark-950 border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors ${
-                        errors.email ? 'border-rose-500/80 bg-rose-950/20' : 'border-dark-750 focus:border-brand-500'
-                      }`}
+                      className={`w-full px-3.5 py-2.5 rounded-xl bg-dark-950 border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors ${errors.email ? 'border-rose-500/80 bg-rose-950/20' : 'border-dark-750 focus:border-brand-500'
+                        }`}
                     />
                     {errors.email && (
                       <p className="mt-1 text-[11px] text-rose-400">{errors.email}</p>
@@ -405,9 +403,8 @@ export function Contact({ preselectedService }) {
                     onChange={handleChange}
                     placeholder="Briefly describe your goals, timeline, or what you'd like to achieve..."
                     required
-                    className={`w-full px-3.5 py-2.5 rounded-xl bg-dark-950 border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors resize-y ${
-                      errors.message ? 'border-rose-500/80 bg-rose-950/20' : 'border-dark-750 focus:border-brand-500'
-                    }`}
+                    className={`w-full px-3.5 py-2.5 rounded-xl bg-dark-950 border text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors resize-y ${errors.message ? 'border-rose-500/80 bg-rose-950/20' : 'border-dark-750 focus:border-brand-500'
+                      }`}
                   ></textarea>
                   {errors.message && (
                     <p className="mt-1 text-[11px] text-rose-400">{errors.message}</p>

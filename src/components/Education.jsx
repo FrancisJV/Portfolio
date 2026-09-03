@@ -7,7 +7,7 @@ import { Tag } from './Tag';
 
 export function Education() {
   return (
-    <section id="education" className="py-20 md:py-28 bg-dark-950 relative border-t border-dark-800/80">
+    <section id="education" className="pt-8 pb-20 md:pt-10 md:pb-28 bg-dark-950 relative border-t border-dark-800/80">
       <Container>
         <SectionHeading
           eyebrow="Academic Background"
@@ -16,12 +16,12 @@ export function Education() {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left / Primary Degree Card (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             <div className="bg-dark-900 border border-brand-500/30 rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-48 h-48 bg-brand-500/10 rounded-full blur-2xl pointer-events-none -mr-10 -mt-10"></div>
-              
+
               <div className="relative z-10">
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                   <span className="text-xs font-bold uppercase tracking-wider text-brand-300">
@@ -54,12 +54,12 @@ export function Education() {
 
                 {/* Relevant Academic Focus Areas */}
                 <div className="space-y-2">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                  <div className="text-sm font-bold uppercase tracking-wider text-slate-400">
                     Core Academic Focus:
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {educationData.primary.relevantFocus.map((item) => (
-                      <div key={item} className="flex items-center gap-2 text-xs text-slate-300">
+                      <div key={item} className="flex items-center gap-2 text-sm text-slate-300">
                         <CheckCircle2 className="w-3.5 h-3.5 text-brand-400 flex-shrink-0" />
                         <span>{item}</span>
                       </div>
@@ -71,7 +71,7 @@ export function Education() {
 
             {/* Additional Accounting Qualifications */}
             <div className="space-y-4">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 pl-1">
+              <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400 pl-1">
                 Additional Qualifications
               </h4>
 
@@ -85,10 +85,10 @@ export function Education() {
                       <h5 className="text-sm font-bold text-white mt-2.5 mb-1">
                         {item.qualification}
                       </h5>
-                      <div className="text-xs font-medium text-slate-400 mb-2">
+                      <div className="text-sm font-medium text-slate-400 mb-2">
                         {item.institution}
                       </div>
-                      <p className="text-xs text-slate-400 leading-relaxed">
+                      <p className="text-sm text-slate-400 leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -100,7 +100,7 @@ export function Education() {
 
           {/* Right Column: Leadership & Community (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 pl-1">
+            <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400 pl-1">
               Leadership & Community Engagement
             </h4>
 
@@ -110,14 +110,14 @@ export function Education() {
                   key={item.organization}
                   className="p-5 rounded-xl bg-dark-900 border border-dark-800 hover:border-brand-500/30 transition-colors"
                 >
-                  <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                  <div className="flex items-center justify-between text-sm text-slate-400 mb-1">
                     <span className="text-brand-300 font-semibold">{item.role}</span>
                     <span className="font-mono text-[11px]">{item.period}</span>
                   </div>
                   <h5 className="text-sm font-bold text-slate-200 mb-1.5">
                     {item.organization}
                   </h5>
-                  <p className="text-xs text-slate-400 leading-relaxed">
+                  <p className="text-sm text-slate-400 leading-relaxed">
                     {item.description}
                   </p>
                 </div>

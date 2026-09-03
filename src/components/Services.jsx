@@ -1,13 +1,13 @@
 import React from 'react';
-import { 
-  LayoutTemplate, 
-  PieChart, 
-  ShieldCheck, 
-  FileText, 
-  Sparkles, 
-  Check, 
+import {
+  LayoutTemplate,
+  PieChart,
+  ShieldCheck,
+  FileText,
+  Sparkles,
+  Check,
   ArrowRight,
-  ArrowUpRight 
+  ArrowUpRight
 } from 'lucide-react';
 import { servicesData } from '../data/services';
 import { Container } from './Container';
@@ -30,13 +30,12 @@ export function Services({ onSelectService }) {
     }
     const contactSection = document.getElementById('contact');
     if (contactSection) {
-      const top = contactSection.getBoundingClientRect().top + window.pageYOffset - 80;
-      window.scrollTo({ top, behavior: 'smooth' });
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <section id="services" className="py-20 md:py-28 bg-dark-900/60 relative border-t border-dark-800/80">
+    <section id="services" className="pt-8 pb-20 md:pt-10 md:pb-28 bg-dark-900/60 relative border-t border-dark-800/80">
       <Container>
         <SectionHeading
           eyebrow="Freelance Services"
@@ -73,10 +72,10 @@ export function Services({ onSelectService }) {
 
                   {/* Deliverables List */}
                   <div className="space-y-2 mb-6">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                    <div className="text-[12px] font-bold uppercase tracking-wider text-slate-400">
                       Deliverables Include:
                     </div>
-                    <ul className="space-y-1.5 text-xs text-slate-300">
+                    <ul className="space-y-1.5 text-sm text-slate-300">
                       {service.deliverables.map((item) => (
                         <li key={item} className="flex items-start gap-2">
                           <Check className="w-3.5 h-3.5 text-emerald-400 mt-0.5 flex-shrink-0" />
