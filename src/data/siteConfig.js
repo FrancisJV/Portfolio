@@ -12,7 +12,7 @@ export const siteConfig = {
   email: "vidhushika.remote@gmail.com",
 
   // Profile Picture (Saved in public/profile.jpeg)
-  profileImage: "/profile.jpeg",
+  profileImage: `${import.meta.env.BASE_URL}profile.jpeg`,
 
   // Availability status badge
   availability: {
