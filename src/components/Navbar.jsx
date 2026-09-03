@@ -78,30 +78,45 @@ export function Navbar({ onOpenContact }) {
             </div>
           </a>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-dark-900/70 border border-dark-800/80 px-2.5 xl:px-3 py-1.5 rounded-full backdrop-blur-md flex-shrink-0" aria-label="Main Navigation">
-            {navItems.map((item) => {
-              const isActive = activeSection === item.id;
-              return (
-                <a
-                  key={item.id}
-                  href={`#${item.id}`}
-                  onClick={(e) => handleNavClick(e, item.id)}
-                  className={cn(
-                    'px-3 xl:px-3.5 py-1.5 text-[13.5px] xl:text-[14.5px] font-medium tracking-tight whitespace-nowrap rounded-full transition-all duration-200',
-                    isActive
-                      ? 'bg-brand-500/15 text-brand-300 font-semibold shadow-inner'
-                      : 'text-slate-300 hover:text-white hover:bg-dark-800/60'
-                  )}
-                >
-                  {item.label}
-                </a>
-              );
-            })}
-          </nav>
+          {/* Right Group: Navigation Links + Action CTA (Grouped together on the right) */}
+          <div className="hidden lg:flex items-center gap-4 xl:gap-5 flex-shrink-0">
+            {/* Desktop Navigation Links */}
+            <nav className="flex items-center gap-0.5 xl:gap-1 bg-dark-900/70 border border-dark-800/80 px-2.5 xl:px-3 py-1.5 rounded-full backdrop-blur-md" aria-label="Main Navigation">
+              {navItems.map((item) => {
+                const isActive = activeSection === item.id;
+                return (
+                  <a
+                    key={item.id}
+                    href={`#${item.id}`}
+                    onClick={(e) => handleNavClick(e, item.id)}
+                    className={cn(
+                      'px-3 xl:px-3.5 py-1.5 text-[13.5px] xl:text-[14.5px] font-medium tracking-tight whitespace-nowrap rounded-full transition-all duration-200',
+                      isActive
+                        ? 'bg-brand-500/15 text-brand-300 font-semibold shadow-inner'
+                        : 'text-slate-300 hover:text-white hover:bg-dark-800/60'
+                    )}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
+            </nav>
 
-          {/* Action CTAs */}
-          <div className="hidden sm:flex items-center gap-2.5 flex-shrink-0">
+            {/* Action CTA */}
+            <Button
+              href="#freelance"
+              onClick={(e) => handleNavClick(e, 'freelance')}
+              variant="glow"
+              size="sm"
+              icon={ArrowUpRight}
+              className="text-xs whitespace-nowrap"
+            >
+              Work With Me
+            </Button>
+          </div>
+
+          {/* Tablet CTA (Visible on sm..md, hidden on lg+) */}
+          <div className="hidden sm:flex lg:hidden items-center gap-2.5 flex-shrink-0">
             <Button
               href="#freelance"
               onClick={(e) => handleNavClick(e, 'freelance')}
