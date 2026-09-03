@@ -30,7 +30,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="pt-8 pb-12 md:pt-10 md:pb-16 bg-dark-950 relative scroll-mt-16 md:scroll-mt-16">
+    <section id="about" className="pt-8 pb-12 md:pt-10 md:pb-16 bg-dark-950 relative">
       <Container>
         <SectionHeading
           eyebrow="About Me"

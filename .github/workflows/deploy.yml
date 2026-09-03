@@ -38,7 +38,7 @@ jobs:
       - name: Build with Vite
         env:
           VITE_FORMSPREE_ENDPOINT: ${{ secrets.VITE_FORMSPREE_ENDPOINT }}
-          VITE_BASE_PATH: ./
+          VITE_BASE_PATH: /Portfolio/
         run: npm run build
 
       - name: Setup Pages
