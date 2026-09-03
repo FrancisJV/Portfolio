@@ -43,7 +43,7 @@ export function Hero() {
             {/* Main Headline (#1 Dominant Visual Hierarchy - Preserved Exactly) */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-white tracking-tight leading-[1.15] mb-4">
               Turning <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-200 to-indigo-200">ideas</span>,
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-brand-400">data</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-brand-400"> data </span>
               and <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-brand-300">technology</span> into practical digital solutions.
             </h1>
 
